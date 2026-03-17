@@ -90,7 +90,7 @@ flutter test
 
 ## Enfoque Didactico
 
-Este proyecto prioriza legibilidad y explicacion de conceptos sobre complejidad funcional. El codigo en `lib/main.dart` contiene comentarios pedagógicos para apoyar el aprendizaje paso a paso.
+Este proyecto prioriza legibilidad y explicacion de conceptos sobre complejidad funcional. El codigo en `lib/main.dart` contiene comentarios pedagogicos para apoyar el aprendizaje paso a paso.
 
 ## Posibles Mejoras
 
