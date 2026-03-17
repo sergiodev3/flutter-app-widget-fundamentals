@@ -15,6 +15,49 @@ Mostrar como Flutter construye interfaces mediante composicion de piezas pequena
 La app incluye una demostracion en pantalla de un boton construido por capas con:
 `Padding -> Container -> GestureDetector -> Text`
 
+## Diagramas Conceptuales (Mermaid)
+
+### 1) Arbol De Widgets Principal
+
+```mermaid
+flowchart TD
+	A[main()] --> B[runApp]
+	B --> C[MiAppFlutter]
+	C --> D[MaterialApp]
+	D --> E[MiPaginaInicio]
+	E --> F[Scaffold]
+	F --> G[AppBar]
+	F --> H[SingleChildScrollView]
+	H --> I[Column]
+	I --> J[Seccion Concepto]
+	I --> K[Seccion Boton Composicion]
+	I --> L[Seccion Arbol Widgets]
+```
+
+### 2) Composicion Del Boton Por Capas
+
+```mermaid
+flowchart LR
+	A[Padding<br/>estructura y espaciado] --> B[Container<br/>estetica y decoracion]
+	B --> C[GestureDetector<br/>interactividad]
+	C --> D[Text<br/>contenido visible]
+```
+
+### 3) Flujo De Interaccion Al Tocar El Boton
+
+```mermaid
+sequenceDiagram
+	participant U as Usuario
+	participant G as GestureDetector
+	participant S as ScaffoldMessenger
+	participant B as SnackBar
+
+	U->>G: Tap sobre el boton
+	G->>S: onTap()
+	S->>B: showSnackBar(...)
+	B-->>U: Mensaje visible por 3 segundos
+```
+
 ## Contenido De La App
 
 La pantalla principal incluye:
